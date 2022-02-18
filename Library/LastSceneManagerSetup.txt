@@ -1,0 +1,5 @@
+sceneSetups:
+- path: "Assets/Scenes/Cl\xE9ment_Scene.unity"
+  isLoaded: 1
+  isActive: 1
+  isSubScene: 0
