@@ -65,6 +65,13 @@ public class ManchouMovement : MonoBehaviour
         {
             rb.velocity = new Vector2(inputX * move_speed, rb.velocity.y);
         }
+
+        if (isOnPipoulpe)
+        {
+            rb.velocity = new Vector2(rb.velocity.x, jump_speed);
+            rb.AddForce(new Vector2(5, 10), ForceMode2D.Impulse);
+            print("Add force");
+        }
     }
 
     public void Move(InputAction.CallbackContext context)
@@ -87,10 +94,12 @@ public class ManchouMovement : MonoBehaviour
     public void Jump(InputAction.CallbackContext context)
     {
         //print("début jump");
-        if (isOnPlatform)
+        if ((isOnPlatform)||(isOnIce))
         {
             rb.velocity = new Vector2(rb.velocity.x, jump_speed);
         }
+        
+        /*
         if (isOnPipoulpe)
         {
             rb.velocity = new Vector2(rb.velocity.x, jump_speed);
@@ -98,6 +107,7 @@ public class ManchouMovement : MonoBehaviour
             print("Add force");
         }
         //print("fin jump");
+        */
     }
 
 
@@ -144,6 +154,13 @@ public class ManchouMovement : MonoBehaviour
         }
     }
 
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Pipoulpe")
+        {
+            Physics2D.IgnoreCollision(collision.gameObject.GetComponent<Collider2D>(), this.GetComponent<Collider2D>());
+        }
+    }
 
     private bool CheckGround(LayerMask mask)
     {

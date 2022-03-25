@@ -6,6 +6,7 @@ EditorUserSettings:
   serializedVersion: 4
   m_ConfigSettings:
 <<<<<<< HEAD
+<<<<<<< HEAD
     RecentlyUsedScenePath-0:
       value: 22424703114646680e0b0227036c7d11051e142f131b2535232c5326ece92021
       flags: 0
@@ -29,6 +30,8 @@ EditorUserSettings:
 =======
 >>>>>>> 927e447 (modified manager + grappling mecanic)
 >>>>>>> 42a8ced25019b9ef83b18bdb7b3cf2016e821bf6
+=======
+>>>>>>> 4d4e826 (Spring mecanic + prefabs)
     vcSharedLogLevel:
       value: 0d5e400f0650
       flags: 0

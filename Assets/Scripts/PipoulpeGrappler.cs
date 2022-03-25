@@ -2,13 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using System.Collections.Generic;
-
 
 public class PipoulpeGrappler : MonoBehaviour
 {
     public LineRenderer lineRenderer;
     public DistanceJoint2D distanceJoint;
+    public SpringJoint2D springJoint;
     Transform tf;
     Rigidbody2D rb;
 
@@ -19,6 +18,9 @@ public class PipoulpeGrappler : MonoBehaviour
 
     [SerializeField] float boostForce;
     public float aboveY;
+    public float speedForSpring;
+
+
     private int indexPoint = 0;
     private int numberOfPoints;
     private List<Vector2> positions = new List<Vector2>();
@@ -46,6 +48,9 @@ public class PipoulpeGrappler : MonoBehaviour
 
         distanceJoint.enabled = false;
         lineRenderer.enabled = false;
+        springJoint.enabled = false;
+        cursorTf.position = positions[indexPoint] + new Vector2(0, aboveY);
+
     }
 
     // Update is called once per frame
@@ -56,11 +61,11 @@ public class PipoulpeGrappler : MonoBehaviour
             lineRenderer.SetPosition(0, tf.position);
             if (rb.velocity.x > 0)
             {
-                rb.AddForce(new Vector2(rb.velocity.x*boostForce, 0),ForceMode2D.Force);
+                rb.AddForce(new Vector2(boostForce, 0),ForceMode2D.Force);
             }
             else if (rb.velocity.x<0)
             {
-                rb.AddForce(new Vector2(rb.velocity.x * boostForce, 0), ForceMode2D.Force);
+                rb.AddForce(new Vector2(-boostForce, 0), ForceMode2D.Force);
             }
         }
 
@@ -79,7 +84,6 @@ public class PipoulpeGrappler : MonoBehaviour
         lineRenderer.enabled = true;
     }
 
-
     public void ReleaseGrappling(InputAction.CallbackContext context)
     {
         Debug.Log("InputAction ReleaseGrappling");
@@ -87,6 +91,32 @@ public class PipoulpeGrappler : MonoBehaviour
         distanceJoint.enabled = false;
         lineRenderer.enabled = false;
     }
+
+
+    public void Spring(InputAction.CallbackContext context)
+    {
+        Debug.Log("InputAction Spring");
+
+        distanceJoint.enabled = false;
+        lineRenderer.enabled = true;
+        lineRenderer.SetPosition(0, tf.position);
+        lineRenderer.SetPosition(1, positions[indexPoint]);
+
+        springJoint.connectedAnchor = positions[indexPoint];
+        springJoint.distance = (tf.position - cursorTf.position).magnitude / 4;
+        springJoint.frequency = speedForSpring;
+        springJoint.enabled = true;
+    }
+
+    public void ReleaseSpring(InputAction.CallbackContext context)
+    {
+        Debug.Log("InputAction ReleaseSpring");
+
+        distanceJoint.enabled = false;
+        lineRenderer.enabled = false;
+        springJoint.enabled = false;
+    }
+
 
     public void ChangeTarget(InputAction.CallbackContext context)
     {
