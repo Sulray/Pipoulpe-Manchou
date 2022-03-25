@@ -47,6 +47,7 @@ public class PipoulpeMovement : MonoBehaviour
         isInWater = CheckGround(maskWater);
         //Debug.Log(isOnPipoulpe);
 
+       
         if (isInWater)
         {
             //rb.velocity = new Vector2(inputX * swim_speed, inputY * swim_speed);
@@ -98,6 +99,8 @@ public class PipoulpeMovement : MonoBehaviour
             rb.drag = drag;
         }
     }
+
+
 
     private bool CheckGround(LayerMask mask)
     {
