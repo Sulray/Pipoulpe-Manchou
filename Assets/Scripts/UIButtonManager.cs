@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class ButtonManager : MonoBehaviour
+public class UIButtonManager : MonoBehaviour
 {
     public void Lvl1()
     {
-        SceneManager.LoadScene("Clément_Scene");
+        SceneManager.LoadScene("(Basile)-LvL1");
     }
 
     public void Exit()
