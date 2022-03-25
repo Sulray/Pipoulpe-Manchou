@@ -9,7 +9,7 @@ public class PipoulpeManager : MonoBehaviour
     public int currentHealth;
     public int maxHealth;
 
-    public Vector2 SpawnPoint;
+    public GameObject SpawnPoint;
 
     Transform tf;
 
@@ -39,6 +39,6 @@ public class PipoulpeManager : MonoBehaviour
     private void Death()
     {
         currentHealth = maxHealth;
-        tf.position = SpawnPoint;
+        tf.position = SpawnPoint.transform.position;
     }
 }
