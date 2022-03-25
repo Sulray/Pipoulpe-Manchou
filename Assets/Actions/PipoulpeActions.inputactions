@@ -58,6 +58,24 @@
                     "processors": "",
                     "interactions": "SlowTap",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "Spring",
+                    "type": "Button",
+                    "id": "b00d50a3-b3e8-481b-8349-73656bd71a85",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "Hold",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "ReleaseSpring",
+                    "type": "Button",
+                    "id": "61a7c099-b972-4829-9f51-384c31486607",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "SlowTap",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -267,6 +285,28 @@
                     "processors": "",
                     "groups": "",
                     "action": "ReleaseGrappling",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "0fe60bcd-7712-47d2-aa86-1f4c2e2d33a6",
+                    "path": "<Keyboard>/r",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Spring",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "39481f2d-b9cf-43c9-8016-ea197d056bc0",
+                    "path": "<Keyboard>/r",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ReleaseSpring",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

@@ -29,7 +29,7 @@ public class PlatformMovement : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Player")
+        if ((collision.gameObject.tag == "Pipoulpe")|| (collision.gameObject.tag == "Manchou"))
         {
             collision.transform.SetParent(this.transform);
         }
@@ -37,7 +37,7 @@ public class PlatformMovement : MonoBehaviour
 
     private void OnCollisionExit2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Player")
+        if ((collision.gameObject.tag == "Pipoulpe") || (collision.gameObject.tag == "Manchou"))
         {
             collision.transform.SetParent(null);
         }
