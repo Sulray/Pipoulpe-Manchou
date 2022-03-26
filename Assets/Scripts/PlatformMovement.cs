@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class PlatformMovement : MonoBehaviour
 {
-    [SerializeField]
-    public float speed;
+    [SerializeField] public float speed;
     [SerializeField] GameObject plouf; //objet vers lequel la plateforme se dirigera à drag and drop dans l'inspector
     private Vector2 targetPosition;
     

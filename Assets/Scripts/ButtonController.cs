@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+//(commmentaire de basile) ça sert que pour launch des platformes? faudra ptet le rename/changer le code
 public class ButtonController : MonoBehaviour
 {
     public bool isPushed;
