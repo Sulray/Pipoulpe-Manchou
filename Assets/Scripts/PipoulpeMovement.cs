@@ -64,6 +64,8 @@ public class PipoulpeMovement : MonoBehaviour
     public void Move(InputAction.CallbackContext context)
     {
 
+        Debug.Log("input system Move");
+
         inputX = context.ReadValue<Vector2>().x;
         if (isInWater)
         {
