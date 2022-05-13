@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Spikes : MonoBehaviour
+public class Harmful: MonoBehaviour
 {
     private void OnCollisionEnter2D(Collision2D collision) //faut trouver un moyen de récuper le manager indépendament du joueur
     {
