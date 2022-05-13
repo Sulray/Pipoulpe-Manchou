@@ -17,7 +17,6 @@ public class PlatformMovement : MonoBehaviour
     void Update()
     {
         transform.position = Vector2.MoveTowards(transform.position, targetPosition, speed * Time.deltaTime);
-        print(speed);
     }
 
     public void launchPlatform()
