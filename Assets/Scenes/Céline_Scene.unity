@@ -177,7 +177,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 137743348}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.98, y: -0.03, z: -0.39853385}
+  m_LocalPosition: {x: -0.53, y: 4.36, z: -0.39853385}
   m_LocalScale: {x: 0.81203, y: 0.9439849, z: 0.81203}
   m_Children: []
   m_Father: {fileID: 0}
@@ -444,7 +444,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 0.64, y: 0.64}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -1017,6 +1017,10 @@ PrefabInstance:
       propertyPath: target2
       value: 
       objectReference: {fileID: 714698203}
+    - target: {fileID: 5001326357849013870, guid: fbafa8466aa48b74191f765d5a999554, type: 3}
+      propertyPath: direction
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fbafa8466aa48b74191f765d5a999554, type: 3}
 --- !u!1001 &4707662828706732631
