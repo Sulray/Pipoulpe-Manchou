@@ -5037,6 +5037,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Manchou
       objectReference: {fileID: 0}
+    - target: {fileID: 4143080271212559506, guid: 41fdc5efe7378b543818c9c1f1ffb2d2, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -4505382541874194364, guid: cc783a73a070fc24eb6e587667f0d8ed, type: 3}
     - target: {fileID: 4143080271212559507, guid: 41fdc5efe7378b543818c9c1f1ffb2d2, type: 3}
       propertyPath: m_RootOrder
       value: 1
