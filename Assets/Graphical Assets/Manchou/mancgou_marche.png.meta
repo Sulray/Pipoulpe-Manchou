@@ -1,31 +1,19 @@
 fileFormatVersion: 2
-guid: 39f3a3dc676a5f849a799c4bd41d3a71
+guid: cc783a73a070fc24eb6e587667f0d8ed
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 156641292287548255
-    second: Crevette_0
+      213: -4505382541874194364
+    second: mancgou_marche_0
   - first:
-      213: -3145319622359511225
-    second: Crevette_1
+      213: 2233634100127993727
+    second: mancgou_marche_1
   - first:
-      213: 1783711209992136221
-    second: Crevette_2
+      213: -344923651097835751
+    second: mancgou_marche_2
   - first:
-      213: 3238282299483038153
-    second: Crevette_3
-  - first:
-      213: 8857277938902236134
-    second: Crevette_4
-  - first:
-      213: -5000505707682828507
-    second: Crevette_5
-  - first:
-      213: 2665659718899699027
-    second: Crevette_6
-  - first:
-      213: -2094833324479970080
-    second: Crevette_7
+      213: -5014310973435649288
+    second: mancgou_marche_3
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -70,7 +58,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 16
+  spritePixelsToUnits: 64
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -115,13 +103,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Crevette_0
+      name: mancgou_marche_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 16
-        height: 16
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -129,83 +117,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f5b15f7ec608c2200800000000000000
-      internalID: 156641292287548255
+      spriteID: 448975ed27aa971c0800000000000000
+      internalID: -4505382541874194364
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Crevette_1
-      rect:
-        serializedVersion: 2
-        x: 16
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 74f0234d7749954d0800000000000000
-      internalID: -3145319622359511225
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Crevette_2
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d16a67d15e301c810800000000000000
-      internalID: 1783711209992136221
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Crevette_3
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9c12f1f1890b0fc20800000000000000
-      internalID: 3238282299483038153
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Crevette_4
+      name: mancgou_marche_1
       rect:
         serializedVersion: 2
         x: 64
         y: 0
-        width: 16
-        height: 16
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -213,20 +138,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6ebfb298b5f5bea70800000000000000
-      internalID: 8857277938902236134
+      spriteID: f7f045831667ffe10800000000000000
+      internalID: 2233634100127993727
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Crevette_5
+      name: mancgou_marche_2
       rect:
         serializedVersion: 2
-        x: 80
+        x: 128
         y: 0
-        width: 16
-        height: 16
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -234,20 +159,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 52f604c7d82aa9ab0800000000000000
-      internalID: -5000505707682828507
+      spriteID: 917cead44c5963bf0800000000000000
+      internalID: -344923651097835751
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Crevette_6
+      name: mancgou_marche_3
       rect:
         serializedVersion: 2
-        x: 96
+        x: 192
         y: 0
-        width: 16
-        height: 16
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -255,29 +180,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 35d851d14635ef420800000000000000
-      internalID: 2665659718899699027
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Crevette_7
-      rect:
-        serializedVersion: 2
-        x: 112
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0e488b6b038ade2e0800000000000000
-      internalID: -2094833324479970080
+      spriteID: 8f266039cb6996ab0800000000000000
+      internalID: -5014310973435649288
       vertices: []
       indices: 
       edges: []

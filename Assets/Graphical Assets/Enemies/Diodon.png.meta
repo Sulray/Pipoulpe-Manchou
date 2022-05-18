@@ -1,31 +1,25 @@
 fileFormatVersion: 2
-guid: 39f3a3dc676a5f849a799c4bd41d3a71
+guid: 4a1ba470606dd2846b422d2c8a9b4a01
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 156641292287548255
-    second: Crevette_0
+      213: -2743041539247392786
+    second: Diodon_0
   - first:
-      213: -3145319622359511225
-    second: Crevette_1
+      213: -408219465501337974
+    second: Diodon_1
   - first:
-      213: 1783711209992136221
-    second: Crevette_2
+      213: 2405241606566996491
+    second: Diodon_2
   - first:
-      213: 3238282299483038153
-    second: Crevette_3
+      213: 4430945732231273288
+    second: Diodon_3
   - first:
-      213: 8857277938902236134
-    second: Crevette_4
+      213: -6092632724168528491
+    second: Diodon_4
   - first:
-      213: -5000505707682828507
-    second: Crevette_5
-  - first:
-      213: 2665659718899699027
-    second: Crevette_6
-  - first:
-      213: -2094833324479970080
-    second: Crevette_7
+      213: 309520230448735044
+    second: Diodon_5
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -70,7 +64,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 16
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -115,13 +109,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Crevette_0
+      name: Diodon_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 16
-        height: 16
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -129,41 +123,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f5b15f7ec608c2200800000000000000
-      internalID: 156641292287548255
+      spriteID: ee7b409d042cee9d0800000000000000
+      internalID: -2743041539247392786
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Crevette_1
-      rect:
-        serializedVersion: 2
-        x: 16
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 74f0234d7749954d0800000000000000
-      internalID: -3145319622359511225
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Crevette_2
+      name: Diodon_1
       rect:
         serializedVersion: 2
         x: 32
         y: 0
-        width: 16
-        height: 16
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -171,41 +144,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d16a67d15e301c810800000000000000
-      internalID: 1783711209992136221
+      spriteID: a8694681f86b55af0800000000000000
+      internalID: -408219465501337974
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Crevette_3
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9c12f1f1890b0fc20800000000000000
-      internalID: 3238282299483038153
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Crevette_4
+      name: Diodon_2
       rect:
         serializedVersion: 2
         x: 64
         y: 0
-        width: 16
-        height: 16
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -213,41 +165,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6ebfb298b5f5bea70800000000000000
-      internalID: 8857277938902236134
+      spriteID: b0a6a666f72216120800000000000000
+      internalID: 2405241606566996491
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Crevette_5
-      rect:
-        serializedVersion: 2
-        x: 80
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 52f604c7d82aa9ab0800000000000000
-      internalID: -5000505707682828507
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Crevette_6
+      name: Diodon_3
       rect:
         serializedVersion: 2
         x: 96
         y: 0
-        width: 16
-        height: 16
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -255,20 +186,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 35d851d14635ef420800000000000000
-      internalID: 2665659718899699027
+      spriteID: 84b9da4daa1ed7d30800000000000000
+      internalID: 4430945732231273288
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Crevette_7
+      name: Diodon_4
       rect:
         serializedVersion: 2
-        x: 112
+        x: 128
         y: 0
-        width: 16
-        height: 16
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -276,8 +207,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0e488b6b038ade2e0800000000000000
-      internalID: -2094833324479970080
+      spriteID: 59da30941de927ba0800000000000000
+      internalID: -6092632724168528491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Diodon_5
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 443a1ba7203ab4400800000000000000
+      internalID: 309520230448735044
       vertices: []
       indices: 
       edges: []

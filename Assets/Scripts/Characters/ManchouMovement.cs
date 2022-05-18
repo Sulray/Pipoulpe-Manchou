@@ -10,9 +10,6 @@ public class ManchouMovement : MonoBehaviour
     private float inputX;
     private float inputY;
 
-    public Animator animator;
-
-
     [SerializeField] private float move_speed;
     [SerializeField] private float jump_speed;
     [SerializeField] private float swimBounceX;
@@ -57,9 +54,6 @@ public class ManchouMovement : MonoBehaviour
         isInWater = CheckGround(maskWater);
         //Debug.Log(isOnPipoulpe);
 
-        animator.SetFloat("Speed", Mathf.Abs(inputX * move_speed));
-        //animator.SetFloat("Crouch", ????);
-
         if (isInWater)
         {
             //rb.velocity = new Vector2(inputX * swim_speed, inputY * swim_speed);
@@ -99,7 +93,7 @@ public class ManchouMovement : MonoBehaviour
 
     public void Jump(InputAction.CallbackContext context)
     {
-        //print("début jump");
+        //print("dï¿½but jump");
         if ((isOnPlatform)||(isOnIce))
         {
             rb.velocity = new Vector2(rb.velocity.x, jump_speed);
@@ -177,3 +171,6 @@ public class ManchouMovement : MonoBehaviour
     }
 
 }
+
+
+

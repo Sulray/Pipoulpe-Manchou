@@ -1,31 +1,16 @@
 fileFormatVersion: 2
-guid: 39f3a3dc676a5f849a799c4bd41d3a71
+guid: 0bf9793204221694ab61be21b03a5185
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 156641292287548255
-    second: Crevette_0
+      213: 4990285577051022580
+    second: manchou_glisse_0
   - first:
-      213: -3145319622359511225
-    second: Crevette_1
+      213: 4744453186974707575
+    second: manchou_glisse_1
   - first:
-      213: 1783711209992136221
-    second: Crevette_2
-  - first:
-      213: 3238282299483038153
-    second: Crevette_3
-  - first:
-      213: 8857277938902236134
-    second: Crevette_4
-  - first:
-      213: -5000505707682828507
-    second: Crevette_5
-  - first:
-      213: 2665659718899699027
-    second: Crevette_6
-  - first:
-      213: -2094833324479970080
-    second: Crevette_7
+      213: -3028261135945730515
+    second: manchou_glisse_2
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -70,7 +55,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 16
+  spritePixelsToUnits: 96
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -115,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Crevette_0
+      name: manchou_glisse_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 16
-        height: 16
+        width: 96
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -129,125 +114,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f5b15f7ec608c2200800000000000000
-      internalID: 156641292287548255
+      spriteID: 4f4a1ebea4e014540800000000000000
+      internalID: 4990285577051022580
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Crevette_1
-      rect:
-        serializedVersion: 2
-        x: 16
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 74f0234d7749954d0800000000000000
-      internalID: -3145319622359511225
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Crevette_2
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d16a67d15e301c810800000000000000
-      internalID: 1783711209992136221
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Crevette_3
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9c12f1f1890b0fc20800000000000000
-      internalID: 3238282299483038153
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Crevette_4
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6ebfb298b5f5bea70800000000000000
-      internalID: 8857277938902236134
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Crevette_5
-      rect:
-        serializedVersion: 2
-        x: 80
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 52f604c7d82aa9ab0800000000000000
-      internalID: -5000505707682828507
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Crevette_6
+      name: manchou_glisse_1
       rect:
         serializedVersion: 2
         x: 96
         y: 0
-        width: 16
-        height: 16
+        width: 96
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -255,20 +135,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 35d851d14635ef420800000000000000
-      internalID: 2665659718899699027
+      spriteID: 77fe81f490fa7d140800000000000000
+      internalID: 4744453186974707575
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Crevette_7
+      name: manchou_glisse_2
       rect:
         serializedVersion: 2
-        x: 112
+        x: 192
         y: 0
-        width: 16
-        height: 16
+        width: 96
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -276,8 +156,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0e488b6b038ade2e0800000000000000
-      internalID: -2094833324479970080
+      spriteID: d2675d09a8479f5d0800000000000000
+      internalID: -3028261135945730515
       vertices: []
       indices: 
       edges: []
