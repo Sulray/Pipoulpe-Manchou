@@ -38,10 +38,10 @@ public class Crevette : MonoBehaviour
     private void Death()
     {
         isDead = true;
-        Destroy(this);
+        Destroy(this.gameObject);
     }
 
-    private void Damage(int damage)
+    public void Damage(int damage)
     {
         currentHealth -= damage;
         if (currentHealth <= 0)
