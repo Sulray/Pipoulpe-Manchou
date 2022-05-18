@@ -5,22 +5,40 @@ using UnityEngine.SceneManagement;
 
 public class Door : MonoBehaviour
 {
-    private bool onePlayerPresent = false;
+    private bool pipoulpeOn = false;
+    private bool manchouOn = false;
     public Scenes nextScene; //On peut essayer de sérialiser, le but c'est de choisir vers quelle scène envoie la porte
-    private void OnCollisionEnter2D(Collision2D collision)
+
+    //lorsqu'un personnage entre en contact avec la porte,on l'indique, si les 2 touchent la porte on passe à la suite!
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (onePlayerPresent == true)
+        if (pipoulpeOn == true && manchouOn == true)
         {
             SceneManager.LoadScene(nextScene.ToString());
+            Debug.Log("2");
         }
         else
         {
-            onePlayerPresent = true;
+            if (collision.gameObject.tag == "Manchou")
+            {
+                manchouOn = true;
+            }
+            else if (collision.gameObject.tag == "Pipoulpe")
+            {
+                pipoulpeOn = true;
+            }
         }
     }
-
-    private void OnCollisionExit2D(Collision2D collision)
+    //lorsqu'un personnage n'est plus en contact avec la porte, on l'indique
+    private void OnTriggerExit2D(Collider2D collision)
     {
-        onePlayerPresent = false;
+        if (collision.gameObject.tag == "Manchou")
+        {
+            manchouOn = false;
+        }
+        else if (collision.gameObject.tag == "Pipoulpe")
+        {
+            pipoulpeOn = false;
+        }
     }
 }
