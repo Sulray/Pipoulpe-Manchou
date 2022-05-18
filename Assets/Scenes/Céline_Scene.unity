@@ -839,6 +839,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Crevette_0
       objectReference: {fileID: 0}
+    - target: {fileID: 1936392269309737339, guid: b8fc4a2e7592b2a4aac9779a72ce1b7e, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     - target: {fileID: 4487952776747215090, guid: b8fc4a2e7592b2a4aac9779a72ce1b7e, type: 3}
       propertyPath: target1
       value: 
