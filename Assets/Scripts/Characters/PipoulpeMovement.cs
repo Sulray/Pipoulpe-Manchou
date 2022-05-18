@@ -4,14 +4,13 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 
 
-public class ManchouMovement : MonoBehaviour
+public class PipoulpeMovement : MonoBehaviour
 {
     Rigidbody2D rb;
     private float inputX;
     private float inputY;
 
     [SerializeField] private float move_speed;
-    [SerializeField] private float jump_speed;
     [SerializeField] private float swimBounceX;
     [SerializeField] private float swimBounceY;
     [SerializeField] private float gravity;
@@ -21,13 +20,10 @@ public class ManchouMovement : MonoBehaviour
 
 
     LayerMask maskPlatform;
-    LayerMask maskPipoulpe;
     LayerMask maskIce;
     LayerMask maskWater;
-    LayerMask maskBoostJump;
 
     private bool isOnPlatform = true;
-    private bool isOnPipoulpe = false;
     private bool isOnIce = false;
     private bool isInWater = false;
 
@@ -37,10 +33,8 @@ public class ManchouMovement : MonoBehaviour
     {
         rb = this.GetComponent<Rigidbody2D>();
         maskPlatform = LayerMask.GetMask("Platform");
-        maskPipoulpe = LayerMask.GetMask("Pipoulpe");
         maskIce = LayerMask.GetMask("Ice");
         maskWater = LayerMask.GetMask("Water");
-        maskBoostJump = LayerMask.GetMask("BoostJumpLayer");
         rb.gravityScale = gravity;
 
     }
@@ -49,11 +43,11 @@ public class ManchouMovement : MonoBehaviour
     void Update()
     {
         isOnPlatform = CheckGround(maskPlatform);
-        isOnPipoulpe = CheckGround(maskBoostJump);
         isOnIce = CheckGround(maskIce);
         isInWater = CheckGround(maskWater);
         //Debug.Log(isOnPipoulpe);
 
+       
         if (isInWater)
         {
             //rb.velocity = new Vector2(inputX * swim_speed, inputY * swim_speed);
@@ -65,13 +59,6 @@ public class ManchouMovement : MonoBehaviour
         {
             rb.velocity = new Vector2(inputX * move_speed, rb.velocity.y);
         }
-
-        if (isOnPipoulpe)
-        {
-            rb.velocity = new Vector2(rb.velocity.x, jump_speed);
-            rb.AddForce(new Vector2(5, 10), ForceMode2D.Impulse);
-            print("Add force");
-        }
     }
 
     public void Move(InputAction.CallbackContext context)
@@ -82,7 +69,7 @@ public class ManchouMovement : MonoBehaviour
         {
             Debug.Log("move isinwater");
             inputY = context.ReadValue<Vector2>().y;
-            rb.AddForce(new Vector2(inputX * swimBounceX, inputY * swimBounceY) , ForceMode2D.Impulse);
+            rb.AddForce(new Vector2(inputX * swimBounceX, inputY * swimBounceY), ForceMode2D.Impulse);
         }
         else
         {
@@ -91,48 +78,8 @@ public class ManchouMovement : MonoBehaviour
     }
 
 
-    public void Jump(InputAction.CallbackContext context)
+    void OnTriggerEnter2D(Collider2D other)
     {
-        //print("début jump");
-        if ((isOnPlatform)||(isOnIce))
-        {
-            rb.velocity = new Vector2(rb.velocity.x, jump_speed);
-        }
-        
-        /*
-        if (isOnPipoulpe)
-        {
-            rb.velocity = new Vector2(rb.velocity.x, jump_speed);
-            rb.AddForce(new Vector2(5, 10), ForceMode2D.Impulse);
-            print("Add force");
-        }
-        //print("fin jump");
-        */
-    }
-
-
-
-    void OnTriggerEnter2D(Collider2D other)     
-    {
-        /*
-        LayerMask otherLayer = other.gameObject.layer;
-
-        Debug.Log(other.gameObject.layer);
-        Debug.Log("other layer : " + otherLayer);
-        Debug.Log("mask water : " + maskWater);
-       
-        print(other.gameObject.layer);
-        Debug.Log("collided");
-        if (otherLayer == maskWater)
-        {
-            Debug.Log("Collided with water");
-        }
-        if (other.gameObject.layer == maskBoostJump)
-        {
-            Debug.Log("Collided with maskBoostJump");
-            Debug.Log(CheckGround(maskBoostJump));
-        }
-        */
 
         if (other.gameObject.tag == "Water")
         {
@@ -142,7 +89,6 @@ public class ManchouMovement : MonoBehaviour
 
         }
     }
-
 
     void OnTriggerExit2D(Collider2D other)
     {
@@ -154,24 +100,21 @@ public class ManchouMovement : MonoBehaviour
         }
     }
 
+
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Pipoulpe")
+        if (collision.gameObject.tag == "Manchou")
         {
             Physics2D.IgnoreCollision(collision.gameObject.GetComponent<Collider2D>(), this.GetComponent<Collider2D>());
         }
     }
 
-    private bool CheckGround(LayerMask mask)
+        private bool CheckGround(LayerMask mask)
     {
         // print("Checkground");
         BoxCollider2D collision = this.GetComponent<BoxCollider2D>();
-        RaycastHit2D rc = Physics2D.CircleCast(new Vector2(rb.position.x, rb.position.y), collision.size.x * transform.lossyScale.x / 2, new Vector2(0, -1), collision.size.y * transform.lossyScale.y * (1f / 2 + 1 / 10),mask);
+        RaycastHit2D rc = Physics2D.CircleCast(new Vector2(rb.position.x, rb.position.y), collision.size.x * transform.lossyScale.x / 2, new Vector2(0, -1), collision.size.y * transform.lossyScale.y * (1f / 2 + 1 / 10), mask);
         return rc.collider != null;
     }
 
-    void hits (InputAction.CallbackContext context)
-    {
-
-    }
 }

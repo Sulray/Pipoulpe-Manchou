@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 4143080271212559519}
   - component: {fileID: 4143080271212559518}
   - component: {fileID: 4143080271212559517}
+  - component: {fileID: -8329855690643700823}
   m_Layer: 9
   m_Name: Manchou
   m_TagString: Manchou
@@ -76,7 +77,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 3
-  m_Sprite: {fileID: 21300000, guid: c3d9023c797f11a4faeead529e380e80, type: 3}
+  m_Sprite: {fileID: -4505382541874194364, guid: cc783a73a070fc24eb6e587667f0d8ed, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -114,8 +115,8 @@ MonoBehaviour:
   m_ActionEvents:
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4143080271212559516}
-        m_TargetAssemblyTypeName: PlayerMovement, Assembly-CSharp
+      - m_Target: {fileID: 4143080271212559519}
+        m_TargetAssemblyTypeName: ManchouMovement, Assembly-CSharp
         m_MethodName: Move
         m_Mode: 0
         m_Arguments:
@@ -178,7 +179,7 @@ MonoBehaviour:
     m_ActionName: UI/TrackedDeviceOrientation
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4143080271212559516}
+      - m_Target: {fileID: 4143080271212559519}
         m_TargetAssemblyTypeName: ManchouMovement, Assembly-CSharp
         m_MethodName: Jump
         m_Mode: 0
@@ -206,7 +207,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 4143080271212559504}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5d87de7d893751c40b6741b665b6a9bc, type: 3}
+  m_Script: {fileID: 11500000, guid: 0bc4a9e9aa96a3c41a605d91a281915e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentHealth: 1
+  maxHealth: 1
+  SpawnPoint: {fileID: 0}
+  isDead: 0
+--- !u!114 &4143080271212559519
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4143080271212559504}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10c60f4ff2cb6914f9b427484d2d06cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   move_speed: 4
@@ -217,21 +234,7 @@ MonoBehaviour:
   swimGravity: 2
   drag: 0
   swimDrag: 1
---- !u!114 &4143080271212559519
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4143080271212559504}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9843d31fb64bf284bae451d33e32821c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentHealth: 1
-  maxHealth: 1
-  SpawnPoint: {fileID: 0}
+  animator: {fileID: -8329855690643700823}
 --- !u!50 &4143080271212559518
 Rigidbody2D:
   serializedVersion: 4
@@ -279,3 +282,22 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.9927988, y: 1}
   m_EdgeRadius: 0
+--- !u!95 &-8329855690643700823
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4143080271212559504}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: be4eb80db73b510458e6f68bb83e45e9, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
