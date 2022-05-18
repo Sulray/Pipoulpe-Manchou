@@ -234,6 +234,7 @@ MonoBehaviour:
   swimGravity: 2
   drag: 0
   swimDrag: 1
+  animator: {fileID: -8329855690643700823}
 --- !u!50 &4143080271212559518
 Rigidbody2D:
   serializedVersion: 4

@@ -31,6 +31,8 @@ public class ManchouMovement : MonoBehaviour
     private bool isOnIce = false;
     private bool isInWater = false;
 
+    public Animator animator;
+
 
     // Start is called before the first frame update
     void Start()
@@ -53,9 +55,11 @@ public class ManchouMovement : MonoBehaviour
         isOnIce = CheckGround(maskIce);
         isInWater = CheckGround(maskWater);
         //Debug.Log(isOnPipoulpe);
-
+                
         if (isInWater)
         {
+            animator.SetFloat("Crouch", -2);
+
             //rb.velocity = new Vector2(inputX * swim_speed, inputY * swim_speed);
             //rb.AddForce(new Vector2(inputX, inputY) * swimBounce, ForceMode2D.Impulse);
             rb.AddForce(new Vector2(inputX * swimBounceX, inputY * swimBounceY), ForceMode2D.Force);
@@ -63,11 +67,17 @@ public class ManchouMovement : MonoBehaviour
         }
         else
         {
+            animator.SetFloat("Speed", Mathf.Abs(inputX));
+            animator.SetFloat("Crouch", Mathf.Abs(inputY));
+
             rb.velocity = new Vector2(inputX * move_speed, rb.velocity.y);
         }
 
         if (isOnPipoulpe)
         {
+            animator.SetFloat("Speed", Mathf.Abs(0));
+            animator.SetFloat("Crouch", 0);
+
             rb.velocity = new Vector2(rb.velocity.x, jump_speed);
             rb.AddForce(new Vector2(5, 10), ForceMode2D.Impulse);
             print("Add force");
