@@ -170,4 +170,8 @@ public class ManchouMovement : MonoBehaviour
         return rc.collider != null;
     }
 
+    void hits (InputAction.CallbackContext context)
+    {
+
+    }
 }

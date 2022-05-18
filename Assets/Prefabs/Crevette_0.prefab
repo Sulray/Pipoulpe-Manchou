@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 1936392269309737338}
   - component: {fileID: 1936392269309737319}
   - component: {fileID: 1936392269309737318}
-  - component: {fileID: 7985681906869551542}
   - component: {fileID: 4300218541825984135}
+  - component: {fileID: 4487952776747215090}
   m_Layer: 0
   m_Name: Crevette_0
   m_TagString: Untagged
@@ -143,21 +143,6 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0.022728458}
   serializedVersion: 2
   m_Radius: 0.5
---- !u!114 &7985681906869551542
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1936392269309737339}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b922d2f04a561f545b106014054cb8e7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 0
-  target1: {fileID: 0}
-  target2: {fileID: 0}
 --- !u!114 &4300218541825984135
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -170,3 +155,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f65087ad5c885a14387f3016087616c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &4487952776747215090
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1936392269309737339}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9abcd1351b2ff354ca3c0b484217300b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0
+  target1: {fileID: 0}
+  target2: {fileID: 0}
