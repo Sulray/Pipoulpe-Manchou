@@ -18,6 +18,7 @@ public class ManchouMovement : MonoBehaviour
     [SerializeField] private float swimGravity;
     [SerializeField] private float drag;
     [SerializeField] private float swimDrag;
+    [SerializeField] private BoxCollider2D hitboxCollider;
 
 
     LayerMask maskPlatform;
@@ -55,10 +56,12 @@ public class ManchouMovement : MonoBehaviour
         isOnIce = CheckGround(maskIce);
         isInWater = CheckGround(maskWater);
         //Debug.Log(isOnPipoulpe);
-                
+
+        animator.SetBool("Hit", false);
+
         if (isInWater)
         {
-            animator.SetFloat("Crouch", -2);
+            animator.SetBool("Swim", true);
 
             //rb.velocity = new Vector2(inputX * swim_speed, inputY * swim_speed);
             //rb.AddForce(new Vector2(inputX, inputY) * swimBounce, ForceMode2D.Impulse);
@@ -67,20 +70,24 @@ public class ManchouMovement : MonoBehaviour
         }
         else
         {
+            animator.SetBool("Swim", false);
             animator.SetFloat("Speed", Mathf.Abs(inputX));
             animator.SetFloat("Crouch", Mathf.Abs(inputY));
-
             rb.velocity = new Vector2(inputX * move_speed, rb.velocity.y);
         }
 
         if (isOnPipoulpe)
         {
             animator.SetFloat("Speed", Mathf.Abs(0));
-            animator.SetFloat("Crouch", 0);
-
+            
             rb.velocity = new Vector2(rb.velocity.x, jump_speed);
             rb.AddForce(new Vector2(5, 10), ForceMode2D.Impulse);
             print("Add force");
+        }
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            hitboxCollider.enabled = true;
+            Invoke("DesactivateHitbox", 2f);
         }
     }
 
@@ -95,7 +102,7 @@ public class ManchouMovement : MonoBehaviour
         inputX = context.ReadValue<Vector2>().x;
         if (isInWater)
         {
-            Debug.Log("move isinwater");
+            Debug.Log("move is in water");
             inputY = context.ReadValue<Vector2>().y;
             rb.AddForce(new Vector2(inputX * swimBounceX, inputY * swimBounceY) , ForceMode2D.Impulse);
         }
@@ -185,9 +192,17 @@ public class ManchouMovement : MonoBehaviour
         return rc.collider != null;
     }
 
-    void hits (InputAction.CallbackContext context)
+    public void Hits (InputAction.CallbackContext context)
     {
+        Debug.Log("Hits");
+        hitboxCollider.enabled = true;
+        animator.SetBool("Hit", true);
+        Invoke("DesactivateHitbox", 2f);
+    }
 
+    private void DesactivateHitbox()
+    {
+        hitboxCollider.enabled = false;
     }
 }
 

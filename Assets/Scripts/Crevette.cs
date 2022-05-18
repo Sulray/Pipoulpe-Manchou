@@ -10,18 +10,16 @@ public class Crevette : MonoBehaviour
     private Vector2 target1Position;
     private Vector2 target2Position;
     private Vector2 targetPos; //cette valeur est amenée à alterner entre target1 et target2
-    private Rigidbody2D crevetteRB;
-    private PolygonCollider2D crevetteCollider;
-    private SpriteRenderer spriteRenderer;
+    private int currentHealth;
+    private bool isDead;
+
     void Start()
     {
         target1Position = target1.transform.position;
         target2Position = target2.transform.position;
         targetPos = target1Position;
         speed = 3f;
-        crevetteRB = GetComponent<Rigidbody2D>();
-        crevetteCollider = GetComponent<PolygonCollider2D>();
-        spriteRenderer = GetComponent<SpriteRenderer>();
+        currentHealth = 1;
     }
 
     void Update()
@@ -37,11 +35,20 @@ public class Crevette : MonoBehaviour
         transform.position = Vector2.MoveTowards(transform.position, targetPos, speed * Time.deltaTime);
     }
     
-    private void OnTriggerEnter2D (Collider2D other)
+    private void Death()
     {
-        if (other.tag == "Manchou")
+        isDead = true;
+        Destroy(this.gameObject);
+    }
+
+    public void Damage(int damage)
+    {
+        currentHealth -= damage;
+        if (currentHealth <= 0)
         {
-            
+            Death();
         }
     }
 }
+    
+    
