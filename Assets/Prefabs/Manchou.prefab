@@ -206,7 +206,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 4143080271212559504}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5d87de7d893751c40b6741b665b6a9bc, type: 3}
+  m_Script: {fileID: 11500000, guid: 0bc4a9e9aa96a3c41a605d91a281915e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentHealth: 1
+  maxHealth: 1
+  SpawnPoint: {fileID: 0}
+  isDead: 0
+--- !u!114 &4143080271212559519
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4143080271212559504}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10c60f4ff2cb6914f9b427484d2d06cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   move_speed: 4
@@ -217,21 +233,6 @@ MonoBehaviour:
   swimGravity: 2
   drag: 0
   swimDrag: 1
---- !u!114 &4143080271212559519
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4143080271212559504}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9843d31fb64bf284bae451d33e32821c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentHealth: 1
-  maxHealth: 1
-  SpawnPoint: {fileID: 0}
 --- !u!50 &4143080271212559518
 Rigidbody2D:
   serializedVersion: 4

@@ -396,7 +396,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1384042176517774026}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f801ab3d7c647447992657da3b77603, type: 3}
+  m_Script: {fileID: 11500000, guid: 417fa0366dec05844bed41efb04c751e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   move_speed: 4
@@ -415,7 +415,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1384042176517774026}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5bf645e2c9920184ab2786ce73e9e4d6, type: 3}
+  m_Script: {fileID: 11500000, guid: 7a9f3c7e1f3790044ab0dfa08c324b0b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   currentHealth: 1
@@ -430,7 +430,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1384042176517774026}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a39e018650e87184083f6517e84fb41c, type: 3}
+  m_Script: {fileID: 11500000, guid: 7ba35ec3ba6daa142a5b23bc43ec738f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   lineRenderer: {fileID: 1384042176517774019}
@@ -457,7 +457,7 @@ DistanceJoint2D:
   m_Anchor: {x: 0, y: 0}
   m_ConnectedAnchor: {x: 0, y: 0}
   m_AutoConfigureDistance: 1
-  m_Distance: 9.213266
+  m_Distance: 2.6437285
   m_MaxDistanceOnly: 0
 --- !u!120 &1384042176517774019
 LineRenderer:
