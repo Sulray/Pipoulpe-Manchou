@@ -18,6 +18,7 @@ public class ManchouMovement : MonoBehaviour
     [SerializeField] private float swimGravity;
     [SerializeField] private float drag;
     [SerializeField] private float swimDrag;
+    [SerializeField] private BoxCollider2D hitboxCollider;
 
 
     LayerMask maskPlatform;
@@ -81,6 +82,11 @@ public class ManchouMovement : MonoBehaviour
             rb.AddForce(new Vector2(5, 10), ForceMode2D.Impulse);
             print("Add force");
         }
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            hitboxCollider.enabled = true;
+            Invoke("DesactivateHitbox", 2f);
+        }
     }
 
     public void Move(InputAction.CallbackContext context)
@@ -89,7 +95,7 @@ public class ManchouMovement : MonoBehaviour
         inputX = context.ReadValue<Vector2>().x;
         if (isInWater)
         {
-            Debug.Log("move isinwater");
+            Debug.Log("move is in water");
             inputY = context.ReadValue<Vector2>().y;
             rb.AddForce(new Vector2(inputX * swimBounceX, inputY * swimBounceY) , ForceMode2D.Impulse);
         }
@@ -179,9 +185,16 @@ public class ManchouMovement : MonoBehaviour
         return rc.collider != null;
     }
 
-    void hits (InputAction.CallbackContext context)
+    public void Hits (InputAction.CallbackContext context)
     {
+        Debug.Log("Hits");
+        hitboxCollider.enabled = true;
+        Invoke("DesactivateHitbox", 2f);
+    }
 
+    private void DesactivateHitbox()
+    {
+        hitboxCollider.enabled = false;
     }
 }
 

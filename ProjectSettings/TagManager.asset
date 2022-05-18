@@ -10,6 +10,7 @@ TagManager:
   - GrapplingPoint
   - Pipoulpe
   - Manchou
+  - Box
   layers:
   - Default
   - TransparentFX
