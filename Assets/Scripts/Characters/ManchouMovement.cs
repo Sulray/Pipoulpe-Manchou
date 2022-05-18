@@ -70,7 +70,6 @@ public class ManchouMovement : MonoBehaviour
         {
             animator.SetFloat("Speed", Mathf.Abs(inputX));
             animator.SetFloat("Crouch", Mathf.Abs(inputY));
-
             rb.velocity = new Vector2(inputX * move_speed, rb.velocity.y);
         }
 
