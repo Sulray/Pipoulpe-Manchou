@@ -8,18 +8,24 @@ EditorBuildSettings:
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/BasileMenu.unity
     guid: 7a49733b4aabc8b428dc40c6125360a0
   - enabled: 0
     path: "Assets/Scenes/Cl\xE9ment_Scene.unity"
     guid: 46df76c4720641e40bc9f565d0f6ce1a
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/BasileMvp.unity
     guid: f96b6e5842682b64c9b249e3246b03b5
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/BasileControlScreen.unity
     guid: 8b4cb55a18e29d14cb57ab4f1470141e
+  - enabled: 1
+    path: Assets/Scenes/BasileLvl1.unity
+    guid: d9eb55bd974e7b648ba495f020a78727
+  - enabled: 1
+    path: Assets/Scenes/BasileLvl2.unity
+    guid: 06ae9ed984b03f04eacaa9cf2cfa5e3b
   - enabled: 1
     path: Assets/Scenes/BasileVictoire.unity
     guid: e90e8d7d79f1abf47a8360f10785c071
