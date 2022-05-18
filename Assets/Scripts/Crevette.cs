@@ -37,8 +37,11 @@ public class Crevette : MonoBehaviour
         transform.position = Vector2.MoveTowards(transform.position, targetPos, speed * Time.deltaTime);
     }
     
-    private void dies (Collider2D other)
+    private void OnTriggerEnter2D (Collider2D other)
     {
-
+        if (other.tag == "Manchou")
+        {
+            
+        }
     }
 }

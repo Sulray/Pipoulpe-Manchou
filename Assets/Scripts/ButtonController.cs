@@ -20,6 +20,6 @@ public class ButtonController : MonoBehaviour
     
     void Update()
     {
-        print(isPushed);
+
     }
 }
