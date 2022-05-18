@@ -3237,6 +3237,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   door: {fileID: 653858506}
+--- !u!114 &2015907351 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4143080271212559519, guid: 41fdc5efe7378b543818c9c1f1ffb2d2, type: 3}
+  m_PrefabInstance: {fileID: 2112251412}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10c60f4ff2cb6914f9b427484d2d06cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2077351086
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3312,6 +3323,30 @@ PrefabInstance:
     - target: {fileID: 4143080271212559504, guid: 41fdc5efe7378b543818c9c1f1ffb2d2, type: 3}
       propertyPath: m_Name
       value: Manchou
+      objectReference: {fileID: 0}
+    - target: {fileID: 4143080271212559505, guid: 41fdc5efe7378b543818c9c1f1ffb2d2, type: 3}
+      propertyPath: m_ActionEvents.Array.data[0].m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4143080271212559505, guid: 41fdc5efe7378b543818c9c1f1ffb2d2, type: 3}
+      propertyPath: m_ActionEvents.Array.data[0].m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2015907351}
+    - target: {fileID: 4143080271212559505, guid: 41fdc5efe7378b543818c9c1f1ffb2d2, type: 3}
+      propertyPath: m_ActionEvents.Array.data[13].m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2015907351}
+    - target: {fileID: 4143080271212559505, guid: 41fdc5efe7378b543818c9c1f1ffb2d2, type: 3}
+      propertyPath: m_ActionEvents.Array.data[0].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Move
+      objectReference: {fileID: 0}
+    - target: {fileID: 4143080271212559505, guid: 41fdc5efe7378b543818c9c1f1ffb2d2, type: 3}
+      propertyPath: m_ActionEvents.Array.data[13].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Jump
+      objectReference: {fileID: 0}
+    - target: {fileID: 4143080271212559505, guid: 41fdc5efe7378b543818c9c1f1ffb2d2, type: 3}
+      propertyPath: m_ActionEvents.Array.data[0].m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: ManchouMovement, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 4143080271212559507, guid: 41fdc5efe7378b543818c9c1f1ffb2d2, type: 3}
       propertyPath: m_RootOrder
