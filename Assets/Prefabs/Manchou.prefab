@@ -212,6 +212,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentHealth: 1
   maxHealth: 1
+  air: 100000000
+  manchouMovement: {fileID: 4143080271212559519}
   SpawnPoint: {fileID: 0}
   isDead: 0
 --- !u!114 &4143080271212559519

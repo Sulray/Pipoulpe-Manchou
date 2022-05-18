@@ -84,6 +84,11 @@ public class ManchouMovement : MonoBehaviour
         }
     }
 
+    public bool getIsInWater()
+    {
+        return isInWater;
+    }
+
     public void Move(InputAction.CallbackContext context)
     {
 
@@ -103,7 +108,7 @@ public class ManchouMovement : MonoBehaviour
 
     public void Jump(InputAction.CallbackContext context)
     {
-        //print("d�but jump");
+        //print("debut jump");
         if ((isOnPlatform)||(isOnIce))
         {
             rb.velocity = new Vector2(rb.velocity.x, jump_speed);
@@ -172,7 +177,7 @@ public class ManchouMovement : MonoBehaviour
         }
     }
 
-    private bool CheckGround(LayerMask mask)
+    public bool CheckGround(LayerMask mask)
     {
         // print("Checkground");
         BoxCollider2D collision = this.GetComponent<BoxCollider2D>();
