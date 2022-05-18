@@ -6,12 +6,14 @@ public class ButtonController : MonoBehaviour
 {
     public bool isPushed;
     [SerializeField] private GameObject Platform;
-    private void OnCollisionEnter2D(Collision2D collision) //faudra passer en trigger quand on aura un sol
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        isPushed = true;
-        Platform.gameObject.GetComponent<PlatformMovement>().launchPlatform();
+        if (collision.gameObject.tag == "Pipoulpe" || collision.gameObject.tag == "Manchou")
+        {
+            isPushed = true;
+            Platform.gameObject.GetComponent<PlatformMovement>().launchPlatform();
+        }
     }
-
     void Start()
     {
         isPushed = false;
