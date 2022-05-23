@@ -281,12 +281,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0bc4a9e9aa96a3c41a605d91a281915e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentHealth: 1
+  currentAir: 0
   maxHealth: 1
-  air: 100000000
-  manchouMovement: {fileID: 4143080271212559519}
+  maxAir: 10
+  waterBreathingVelocity: 0
+  airBreathingVelocity: 0
+  airBar: {fileID: 4475669170278455673, guid: 59001cbca15b7c848ad28d76f1085a5f, type: 3}
   SpawnPoint: {fileID: 0}
-  isDead: 0
 --- !u!114 &4143080271212559519
 MonoBehaviour:
   m_ObjectHideFlags: 0

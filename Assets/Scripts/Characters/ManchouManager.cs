@@ -7,21 +7,36 @@ public class ManchouManager : MonoBehaviour
 
     private int currentHealth;
     public float currentAir;//à passer en privée
+    
     [SerializeField] private int maxHealth=1;
     [SerializeField] private float maxAir = 10f;
+    
     [SerializeField] private float waterBreathingVelocity;
     [SerializeField] private float airBreathingVelocity;
     private float breathingVelocity;
+
+    [SerializeField] private AirBar airBar;
+    
     [SerializeField] private GameObject SpawnPoint;
+    
     Transform tf;
-    public bool isDead;
+
+
+
     // Start is called before the first frame update
     void Start()
     {
         currentHealth = maxHealth;
+
         currentAir = maxAir;
         breathingVelocity = airBreathingVelocity;
+
+        airBar.setMaxAir(maxAir);
+
+        airBar.enabled = false;
+
         tf = this.GetComponent<Transform>();
+        
     }
 
     // Update is called once per frame
@@ -29,6 +44,8 @@ public class ManchouManager : MonoBehaviour
     void Update()
     {
         currentAir = Mathf.Min(maxAir, currentAir + (breathingVelocity*Time.deltaTime));
+        airBar.SetAir(currentAir);
+        CheckAirBar();
         if (currentAir <= 0)
         {
             //Damage(1);
@@ -45,7 +62,6 @@ public class ManchouManager : MonoBehaviour
 
     private void Death()
     {
-        isDead = true;
         currentHealth = maxHealth;
         tf.position = SpawnPoint.transform.position;
     }
@@ -64,7 +80,22 @@ public class ManchouManager : MonoBehaviour
             currentAir += 3f;
         }
     }
+    
 
+    private void CheckAirBar()
+    {
+        if (!airBar.gameObject.activeSelf && currentAir < maxAir)
+        {
+            Debug.Log(1);
+            airBar.gameObject.SetActive(true);
+        }
+
+        if (airBar.gameObject.activeSelf && currentAir >= maxAir)
+        {
+            Debug.Log(2);
+            airBar.gameObject.SetActive(false);
+        }
+    }
     private void OnTriggerExit2D(Collider2D other)
     {
         if (other.gameObject.tag == "Water")
