@@ -61,7 +61,6 @@ public class ManchouManager : MonoBehaviour
         }
         else if (other.gameObject.tag == "AirBubble")
         {
-            other.gameObject.SetActive(false);
             currentAir += 3f;
         }
     }
