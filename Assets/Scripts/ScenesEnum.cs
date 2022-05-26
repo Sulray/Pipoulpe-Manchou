@@ -7,5 +7,6 @@ public enum Scenes // Sert à énumérer les scènes pour ensuite pouvoir choisir ve
     BasileControlScreen,
     BasileLvl1,
     BasileLvl2,
+    BasileLvl3,
     BasileVictoire
 }

@@ -225,8 +225,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -62, y: -209}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: 23.6091, y: -411}
+  m_SizeDelta: {x: 376.9922, y: 113.4585}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &468786793
 MonoBehaviour:
@@ -573,8 +573,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -454, y: 118}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: -700, y: 200}
+  m_SizeDelta: {x: 200, y: 57.6601}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1875032081
 MonoBehaviour:
@@ -598,10 +598,13 @@ MonoBehaviour:
       m_Calls: []
   m_text: "Bienvenue dans Pipoulpe & Manchou, un jeu de puzzle dans lequel vous controlez
     un poulpe et un manchot qui coop\xE8rent pour explorer le monde\nDans chaque
-    niveau, atteignez la porte pour passer \xE0 la suite\n\nManchou se d\xE9place
-    avec ZQSD, et peut rebondire sur la t\xEAte de Pipoulpe\nPipoulpe se d\xE9place
-    avec les fl\xE8ches directionelles, ne peut sauter, mais peut utiliser ses tentacules
-    pour s'agriper \xE0 certains objets (E & R)"
+    niveau, les 2 joueurs doivent atteindre la porte pour passer \xE0 la suite.\nAttention
+    aux dangers ! les pics et les entit\xE9s DIFFERERENTES vous tuent !!! En plus
+    le petit manchou est sensible \xE0 la noyade, il ne peut pas respirer tr\xE8s
+    longtemps sous l'eau\n\n\t\t\t\tCONTROLES:\n\nManchou : se d\xE9placer : fl\xE8cges
+    directionelles\t\t\tPipoulpe : se  d\xE9plaecr : QSD\n \t       peut rebondire
+    sur la t\xEAte de Pipoulpe\t\t\t\t       grapin fixe :    E\n\t       respiration
+    limit\xE9e sous l'eau\t\t\t \t\t       grapin ressort : R"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -664,7 +667,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: -910.8434, w: 0}
+  m_margin: {x: 0, y: 0, z: -1392.756, w: -581.54565}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -826,10 +829,10 @@ RectTransform:
   m_Father: {fileID: 1973049320}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1225, y: 600}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2054464799
 MonoBehaviour:

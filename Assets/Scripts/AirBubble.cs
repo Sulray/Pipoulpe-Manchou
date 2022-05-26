@@ -40,9 +40,8 @@ public class AirBubble : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log(collision);
+        if (collision.gameObject.tag == "Manchou")
         StartCoroutine("Respawn");
-        Debug.Log("waited");
     }
 
 }
