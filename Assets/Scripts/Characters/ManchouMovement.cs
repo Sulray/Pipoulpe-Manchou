@@ -19,6 +19,11 @@ public class ManchouMovement : MonoBehaviour
     [SerializeField] private float drag;
     [SerializeField] private float swimDrag;
     [SerializeField] private BoxCollider2D hitboxCollider;
+    [SerializeField] private float maxSpeedGround;
+    [SerializeField] private float maxSpeedWater;
+    [SerializeField] private float maxSpeedIce;
+    [SerializeField] private float maxSpeedAir;
+
 
 
     LayerMask maskPlatform;
@@ -34,7 +39,8 @@ public class ManchouMovement : MonoBehaviour
 
     public Animator animator;
 
-
+    Vector3 characterScale;
+    float initCharacterScaleX;
     // Start is called before the first frame update
     void Start()
     {
@@ -45,7 +51,7 @@ public class ManchouMovement : MonoBehaviour
         maskWater = LayerMask.GetMask("Water");
         maskBoostJump = LayerMask.GetMask("BoostJumpLayer");
         rb.gravityScale = gravity;
-
+        initCharacterScaleX = transform.localScale.x;
     }
 
     // Update is called once per frame
@@ -58,6 +64,20 @@ public class ManchouMovement : MonoBehaviour
         //Debug.Log(isOnPipoulpe);
 
         animator.SetBool("Hit", false);
+        
+
+        characterScale = transform.localScale;
+        if (inputX<0)
+        {
+            characterScale.x = initCharacterScaleX;
+        }
+        else if (inputX>0)
+        {
+            characterScale.x = -initCharacterScaleX;
+        }
+        transform.localScale = characterScale;
+
+
 
         if (isInWater)
         {
@@ -89,6 +109,33 @@ public class ManchouMovement : MonoBehaviour
             hitboxCollider.enabled = true;
             Invoke("DesactivateHitbox", 2f);
         }
+
+
+        Debug.Log(rb.velocity.x);
+        float maxSpeedX = maxSpeedGround;
+        float maxSpeedY = maxSpeedAir;
+        if (isInWater)
+        {
+            maxSpeedX = maxSpeedWater;
+            maxSpeedY = maxSpeedWater;
+        }
+        if (isOnIce)
+        {
+            maxSpeedX = maxSpeedIce;
+        }
+        if (isOnPlatform)
+        {
+            maxSpeedX = maxSpeedGround;
+        }
+        if (inputX < 0)
+        {
+            rb.velocity = new Vector2(Mathf.Max(-maxSpeedX, rb.velocity.x), Mathf.Min(maxSpeedY, rb.velocity.y));
+        }
+        else if (inputX > 0)
+        {
+            rb.velocity = new Vector2(Mathf.Min(maxSpeedX, rb.velocity.x), Mathf.Min(maxSpeedY, rb.velocity.y));
+        }
+
     }
 
     public bool getIsInWater()
@@ -98,7 +145,6 @@ public class ManchouMovement : MonoBehaviour
 
     public void Move(InputAction.CallbackContext context)
     {
-
         inputX = context.ReadValue<Vector2>().x;
         if (isInWater)
         {
@@ -115,7 +161,7 @@ public class ManchouMovement : MonoBehaviour
 
     public void Jump(InputAction.CallbackContext context)
     {
-        //print("debut jump");
+        Debug.Log("debut jump");
         if ((isOnPlatform)||(isOnIce))
         {
             rb.velocity = new Vector2(rb.velocity.x, jump_speed);
@@ -188,7 +234,7 @@ public class ManchouMovement : MonoBehaviour
     {
         // print("Checkground");
         BoxCollider2D collision = this.GetComponent<BoxCollider2D>();
-        RaycastHit2D rc = Physics2D.CircleCast(new Vector2(rb.position.x, rb.position.y), collision.size.x * transform.lossyScale.x / 2, new Vector2(0, -1), collision.size.y * transform.lossyScale.y * (1f / 2 + 1 / 10),mask);
+        RaycastHit2D rc = Physics2D.CircleCast(new Vector2(rb.position.x, rb.position.y), collision.size.x * initCharacterScaleX / 2, new Vector2(0, -1), collision.size.y * transform.lossyScale.y * (1f / 2 + 1 / 10),mask);
         return rc.collider != null;
     }
 

@@ -32,4 +32,5 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/BasileLvl3.unity
     guid: 4906bc5e87f2f51449265218cf71acd5
-  m_configObjects: {}
+  m_configObjects:
+    com.unity.input.settings: {fileID: 11400000, guid: 04cebfc7af686f1479b2980fe90102b3, type: 2}

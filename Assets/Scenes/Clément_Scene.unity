@@ -736,6 +736,30 @@ PrefabInstance:
       propertyPath: SpawnPoint
       value: 
       objectReference: {fileID: 297571138}
+    - target: {fileID: 1384042176517774020, guid: f9cf57d3f19fa1146bcd6c9ec2922e15, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: b7d6e7d10f5552a46be799c269d11aea, type: 2}
+    - target: {fileID: 1384042176517774021, guid: f9cf57d3f19fa1146bcd6c9ec2922e15, type: 3}
+      propertyPath: move_speed
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1384042176517774021, guid: f9cf57d3f19fa1146bcd6c9ec2922e15, type: 3}
+      propertyPath: maxSpeedAir
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 1384042176517774021, guid: f9cf57d3f19fa1146bcd6c9ec2922e15, type: 3}
+      propertyPath: maxSpeedIce
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1384042176517774021, guid: f9cf57d3f19fa1146bcd6c9ec2922e15, type: 3}
+      propertyPath: maxSpeedWater
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1384042176517774021, guid: f9cf57d3f19fa1146bcd6c9ec2922e15, type: 3}
+      propertyPath: maxSpeedGround
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 1384042176517774026, guid: f9cf57d3f19fa1146bcd6c9ec2922e15, type: 3}
       propertyPath: m_Name
       value: Pipoulpe
@@ -915,5 +939,21 @@ PrefabInstance:
       propertyPath: SpawnPoint
       value: 
       objectReference: {fileID: 297571138}
+    - target: {fileID: 4143080271212559519, guid: 41fdc5efe7378b543818c9c1f1ffb2d2, type: 3}
+      propertyPath: maxSpeedAir
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 4143080271212559519, guid: 41fdc5efe7378b543818c9c1f1ffb2d2, type: 3}
+      propertyPath: maxSpeedIce
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 4143080271212559519, guid: 41fdc5efe7378b543818c9c1f1ffb2d2, type: 3}
+      propertyPath: maxSpeedWater
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4143080271212559519, guid: 41fdc5efe7378b543818c9c1f1ffb2d2, type: 3}
+      propertyPath: maxSpeedGround
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 41fdc5efe7378b543818c9c1f1ffb2d2, type: 3}

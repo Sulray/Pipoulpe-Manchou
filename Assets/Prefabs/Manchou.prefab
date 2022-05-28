@@ -309,6 +309,10 @@ MonoBehaviour:
   drag: 0
   swimDrag: 1
   hitboxCollider: {fileID: 6221877968002664759}
+  maxSpeedGround: 5
+  maxSpeedWater: 6
+  maxSpeedIce: 12
+  maxSpeedAir: 15
   animator: {fileID: -8329855690643700823}
 --- !u!50 &4143080271212559518
 Rigidbody2D:
@@ -326,7 +330,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0
   m_GravityScale: 2
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: b7d6e7d10f5552a46be799c269d11aea, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0

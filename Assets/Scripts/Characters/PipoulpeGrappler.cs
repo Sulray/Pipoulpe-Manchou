@@ -77,9 +77,11 @@ public class PipoulpeGrappler : MonoBehaviour
 
     public void Grappling(InputAction.CallbackContext context)
     {
+
+        Debug.Log("InputAction Grappling");
+
         if (numberOfPoints>0)
         {
-            Debug.Log("InputAction Grappling");
 
             lineRenderer.SetPosition(0, tf.position);
             lineRenderer.SetPosition(1, positions[indexPoint]);

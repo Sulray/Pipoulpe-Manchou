@@ -340,7 +340,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0
   m_GravityScale: 2
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: b7d6e7d10f5552a46be799c269d11aea, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -406,6 +406,10 @@ MonoBehaviour:
   swimGravity: 2
   drag: 0
   swimDrag: 1
+  maxSpeedGround: 4
+  maxSpeedWater: 10
+  maxSpeedIce: 7
+  maxSpeedAir: 15
 --- !u!114 &1384042176517774018
 MonoBehaviour:
   m_ObjectHideFlags: 0
