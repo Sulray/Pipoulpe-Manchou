@@ -80,7 +80,7 @@ public class PipoulpeMovement : MonoBehaviour
         }
 
 
-        Debug.Log(rb.velocity.x);
+        Debug.Log("a"+rb.velocity.x);
         float maxSpeedX = maxSpeedGround;
         float maxSpeedY = maxSpeedAir;
         if (isInWater)
