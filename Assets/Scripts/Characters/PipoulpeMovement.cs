@@ -42,6 +42,7 @@ public class PipoulpeMovement : MonoBehaviour
         maskIce = LayerMask.GetMask("Ice");
         maskWater = LayerMask.GetMask("Water");
         rb.gravityScale = gravity;
+        initCharacterScaleX = transform.localScale.x;
 
     }
 
@@ -112,7 +113,7 @@ public class PipoulpeMovement : MonoBehaviour
     public void Move(InputAction.CallbackContext context)
     {
         //Debug.Log("pipoulpe move");
-
+        
         inputX = context.ReadValue<Vector2>().x;
         if (isInWater)
         {
@@ -124,6 +125,7 @@ public class PipoulpeMovement : MonoBehaviour
         {
             inputY = 0;
         }
+        
     }
 
 

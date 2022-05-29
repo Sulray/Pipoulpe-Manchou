@@ -831,6 +831,10 @@ PrefabInstance:
       propertyPath: maxSpeedGround
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 1384042176517774023, guid: f9cf57d3f19fa1146bcd6c9ec2922e15, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1384042176517774026, guid: f9cf57d3f19fa1146bcd6c9ec2922e15, type: 3}
       propertyPath: m_Name
       value: Pipoulpe
@@ -1048,6 +1052,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2952098906426637554, guid: 5a8313b9f5b7b284fbfe503520ba7ffd, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2952098906426637555, guid: 5a8313b9f5b7b284fbfe503520ba7ffd, type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
