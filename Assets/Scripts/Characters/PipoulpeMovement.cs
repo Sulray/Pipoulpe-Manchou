@@ -57,11 +57,11 @@ public class PipoulpeMovement : MonoBehaviour
 
 
         characterScale = transform.localScale;
-        if (inputX < 0)
+        if (inputX > 0)
         {
             characterScale.x = initCharacterScaleX;
         }
-        else if (inputX > 0)
+        else if (inputX < 0)
         {
             characterScale.x = -initCharacterScaleX;
         }
