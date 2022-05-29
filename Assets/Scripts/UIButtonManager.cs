@@ -7,6 +7,8 @@ using UnityEngine.SceneManagement;
 
 public class UIButtonManager : MonoBehaviour
 {
+    [SerializeField] private GameObject pauseMenu;
+    [SerializeField] private AudioSource audio;
     public Scenes nextScene; //On peut essayer de sérialiser, le but c'est de choisir vers quelle scène envoie le bouton
     /*public void Next(Scenes scene)
     {
@@ -20,5 +22,12 @@ public class UIButtonManager : MonoBehaviour
     public void Exit()
     {
         Application.Quit();
+    }
+
+    public void Pause()
+    {
+        Time.timeScale = 1f - Time.timeScale;
+        pauseMenu.SetActive(!pauseMenu.activeSelf);
+        audio.volume = 0.16f/audio.volume;
     }
 }
