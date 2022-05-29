@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class PlatformMovement : MonoBehaviour
 {
-    [SerializeField] public float speed;
+    [SerializeField] private GameObject transition;
+
+    [SerializeField] private float speed;
     [SerializeField] GameObject target1; //1er objet vers lequel se dirige la plateforme 
     [SerializeField] GameObject target2; //2e objet vers lequel se dirige la plateforme quand elle a atteint la 1ère
     [SerializeField] bool isHorizontal; //détermine si le mouvement sera selon x ou selon y
@@ -58,7 +60,7 @@ public class PlatformMovement : MonoBehaviour
     {
         if ((collision.gameObject.tag == "Pipoulpe")|| (collision.gameObject.tag == "Manchou"))
         {
-            collision.transform.SetParent(this.transform);
+            collision.transform.SetParent(transition.transform);
         }
     }
 
