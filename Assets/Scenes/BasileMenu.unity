@@ -438,10 +438,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 220690515}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dcf82879dd6280741821e1944bc357e4, type: 3}
+  m_Script: {fileID: 11500000, guid: fa0ceceb8fd5b7644b1f27713f468506, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextScene: 2
+  pauseMenu: {fileID: 0}
+  audio: {fileID: 0}
+  nextScene: 0
 --- !u!1 &454469321
 GameObject:
   m_ObjectHideFlags: 0
