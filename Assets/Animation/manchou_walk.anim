@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: idle
+  m_Name: manchou_walk
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -20,6 +20,14 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
+      value: {fileID: -4505382541874194364, guid: cc783a73a070fc24eb6e587667f0d8ed, type: 3}
+    - time: 0.083333336
+      value: {fileID: 2233634100127993727, guid: cc783a73a070fc24eb6e587667f0d8ed, type: 3}
+    - time: 0.16666667
+      value: {fileID: -344923651097835751, guid: cc783a73a070fc24eb6e587667f0d8ed, type: 3}
+    - time: 0.25
+      value: {fileID: -5014310973435649288, guid: cc783a73a070fc24eb6e587667f0d8ed, type: 3}
+    - time: 0.33333334
       value: {fileID: -4505382541874194364, guid: cc783a73a070fc24eb6e587667f0d8ed, type: 3}
     attribute: m_Sprite
     path: 
@@ -41,12 +49,16 @@ AnimationClip:
       isPPtrCurve: 1
     pptrCurveMapping:
     - {fileID: -4505382541874194364, guid: cc783a73a070fc24eb6e587667f0d8ed, type: 3}
+    - {fileID: 2233634100127993727, guid: cc783a73a070fc24eb6e587667f0d8ed, type: 3}
+    - {fileID: -344923651097835751, guid: cc783a73a070fc24eb6e587667f0d8ed, type: 3}
+    - {fileID: -5014310973435649288, guid: cc783a73a070fc24eb6e587667f0d8ed, type: 3}
+    - {fileID: -4505382541874194364, guid: cc783a73a070fc24eb6e587667f0d8ed, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.016666668
+    m_StopTime: 0.35000002
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
