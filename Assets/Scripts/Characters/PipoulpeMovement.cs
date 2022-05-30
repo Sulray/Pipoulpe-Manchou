@@ -32,6 +32,8 @@ public class PipoulpeMovement : MonoBehaviour
     private bool isOnIce = false;
     private bool isInWater = false;
 
+    public Animator animator;
+
     Vector3 characterScale;
     float initCharacterScaleX;
     // Start is called before the first frame update
@@ -55,6 +57,8 @@ public class PipoulpeMovement : MonoBehaviour
         isInWater = CheckGround(maskWater);
         //Debug.Log(isOnPipoulpe);
 
+        animator.SetBool("IsUnderManchou", false);
+        animator.SetFloat("Speed", Mathf.Abs(inputX));
 
         characterScale = transform.localScale;
         if (inputX > 0)
