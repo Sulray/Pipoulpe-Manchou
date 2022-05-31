@@ -34,6 +34,7 @@ public class UIButtonManager : MonoBehaviour
         Time.timeScale = 1f;
         this.GetComponent<Canvas>().sortingOrder = 0;
 
+        audio = GameObject.Find("AudioManager").GetComponent<AudioSource>();
         previousVolume = maxVolume / 2;
         audio.volume = maxVolume;
         muteImage = muteButton.GetComponent<Image>();

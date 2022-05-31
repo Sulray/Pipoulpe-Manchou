@@ -48,7 +48,7 @@ public class ManchouManager : MonoBehaviour
         CheckAirBar();
         if (currentAir <= 0)
         {
-            //Damage(1);
+            Damage(1);
         }
     }
     public void Damage(int damage) //(basile) j'ai passé en public, c'est cringe mais il est 4h du mat, faudra voir pour qu'un objet extérieur puisse faire des dégats aux joueurs
@@ -66,9 +66,6 @@ public class ManchouManager : MonoBehaviour
         tf.position = SpawnPoint.transform.position;
     }
 
-    //(basile) c'est censé manager la respiration, mais jsp pourquoi il recconait pas quand il rentre dans l'eau, et il refuse d'utiliser
-    //onTriggerEnter2D() pour manchouManager, alors que ça marche pour manchouMovement.
-    //c'est cringe, on va ptet devoir passer la respiration sur manchouMovement
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.tag == "Water")

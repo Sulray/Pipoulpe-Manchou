@@ -13,6 +13,9 @@ public class Crevette : MonoBehaviour
     private int currentHealth;
     private bool isDead;
 
+    private Vector3 scale;
+    private float initXscale;
+
     void Start()
     {
         target1Position = target1.transform.position;
@@ -20,18 +23,24 @@ public class Crevette : MonoBehaviour
         targetPos = target1Position;
         speed = 3f;
         currentHealth = 1;
+
+        initXscale = transform.localScale.x;
     }
 
     void Update()
     {
+        scale = transform.localScale;
         if (targetPos.x == transform.position.x && targetPos == target1Position) //quand la crevette atteint la target à gauche elle switch vers la droite
         {
             targetPos = target2Position;
+            scale.x = initXscale;
         }
         if (targetPos.x == transform.position.x && targetPos == target2Position) //quand la crevette atteint la target à droite elle switch vers la gauche
         {
             targetPos = target1Position;
+            scale.x = -initXscale;
         }
+        transform.localScale = scale;
         transform.position = Vector2.MoveTowards(transform.position, targetPos, speed * Time.deltaTime);
     }
     

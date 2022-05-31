@@ -584,6 +584,14 @@ PrefabInstance:
       propertyPath: SpawnPoint
       value: 
       objectReference: {fileID: 1531630045}
+    - target: {fileID: 4143080271212559517, guid: 41fdc5efe7378b543818c9c1f1ffb2d2, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6246644621887051741, guid: 41fdc5efe7378b543818c9c1f1ffb2d2, type: 3}
+      propertyPath: m_SortingOrder
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 41fdc5efe7378b543818c9c1f1ffb2d2, type: 3}
 --- !u!1 &1334494395
