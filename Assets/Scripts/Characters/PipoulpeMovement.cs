@@ -57,7 +57,6 @@ public class PipoulpeMovement : MonoBehaviour
         isInWater = CheckGround(maskWater);
         //Debug.Log(isOnPipoulpe);
 
-        animator.SetBool("IsUnderManchou", false);
         animator.SetFloat("Speed", Mathf.Abs(inputX));
 
         characterScale = transform.localScale;

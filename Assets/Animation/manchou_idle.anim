@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: idleglisse
+  m_Name: manchou_idle
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -20,7 +20,7 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: -3028261135945730515, guid: 0bf9793204221694ab61be21b03a5185, type: 3}
+      value: {fileID: -4505382541874194364, guid: cc783a73a070fc24eb6e587667f0d8ed, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -40,7 +40,7 @@ AnimationClip:
       customType: 23
       isPPtrCurve: 1
     pptrCurveMapping:
-    - {fileID: -3028261135945730515, guid: 0bf9793204221694ab61be21b03a5185, type: 3}
+    - {fileID: -4505382541874194364, guid: cc783a73a070fc24eb6e587667f0d8ed, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
