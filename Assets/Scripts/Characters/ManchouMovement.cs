@@ -106,6 +106,7 @@ public class ManchouMovement : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             hitboxCollider.enabled = true;
+            animator.SetBool("Hit", true);
             Invoke("DesactivateHitbox", 2f);
         }
 
