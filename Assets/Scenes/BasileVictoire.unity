@@ -889,6 +889,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 377304752}
     m_Modifications:
+    - target: {fileID: 6158287792125250940, guid: 0c28ed52408af314bad521ecaa2a4ee3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1383975627}
+    - target: {fileID: 6158287792125250940, guid: 0c28ed52408af314bad521ecaa2a4ee3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Exit
+      objectReference: {fileID: 0}
     - target: {fileID: 6158287792125250942, guid: 0c28ed52408af314bad521ecaa2a4ee3, type: 3}
       propertyPath: m_Name
       value: Quit

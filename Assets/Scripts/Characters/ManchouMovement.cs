@@ -103,10 +103,10 @@ public class ManchouMovement : MonoBehaviour
             rb.AddForce(new Vector2(5, 10), ForceMode2D.Impulse);
             print("Add force");
         }
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.RightShift))
         {
-            hitboxCollider.enabled = true;
             animator.SetBool("Hit", true);
+            hitboxCollider.enabled = true;
             Invoke("DesactivateHitbox", 2f);
         }
 
